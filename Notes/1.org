@@ -1,0 +1,15 @@
+#-*- mode: org -*-
+#+STARTUP: showall
+
+* Chapter 1
+** 1.1 Elements of Programming
+   - Lisp description of processes, called /procedures/, can
+     themselves be represented and stored as Lisp Data.
+   - Every powerful language has 3 components:
+     1. Primitive Expressions
+     2. Means of Combination
+     3. Means of Abstraction
+*** 1.1.1 Expressions
+    - (4)
+    - (+ 4 5)
+    - 
