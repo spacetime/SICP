@@ -1,6 +1,6 @@
 #-*- mode: org -*-
 #+STARTUP: showall
-#+TODO: TOREAD READING DONE
+#+TODO: TODO TOREAD READING DONE
 
 * Chapter 1
 ** 1.1 Elements of Programming
@@ -11,7 +11,7 @@
      2. Means of Combination
      3. Means of Abstraction
 *** 1.1.1 Expressions
-    - (4)
+    - 4 :: Represents a number
     - (+ 4 5)
     - Pretty Printing
     - REPL :: Read-Eval-Print Loop
@@ -48,23 +48,37 @@
 	- more complicated to deal with 
 	- when we leave the realm of procedures that can be modeled
           by substitution. 
+	- Will not get caught if the arg expansion is never
+          used. Expands *arguments* only when needed!
+    (define (mult a b)
+    ( * a b ))
+    (mult (square 3) (square 3))
+    ---> (* (square 3) (square 3))
       * Applicative Order Evaluation :: "evaluate the arguments and
            then apply"
+        - Since it evaluates both args, even if they aren't required,
+          it may get caught if the arg evaluation is erroneous
     - Both orders give same results for procedures that can be modeled
-      by substitution. 
+      by substitution.
 *** 1.1.6 Conditional Expressions and Predicates
     - /case analysis/ is a *special form*
-(define (abs x)
-  (cond ((> x 0) x)
-        ((= x 0) 0)
-        ((< x 0) (- x))))
+    (define (abs x)
+      (cond ((> x 0) x)
+            ((= x 0) 0)
+            (else (- x))))
 	
     - (cond (<p1> <e1>) (<p2> <e2>)... )
     - (<p> <e>) :: clause
-    - <p> :: Predicate (#T/#F)
+    - <p> :: Predicate (#T or #F)
     - <e> :: expr
     - /if/ is a *special form*
     - (if <predicate> <consequent> <alternative>)
     - logical composition operations
       * and, or, not
+*** TODO Exercise 1.1 - Exercise 1.5
+    SCHEDULED: <2013-12-12 Thu>
+
+
+
+    
 
