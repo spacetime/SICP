@@ -2,6 +2,7 @@
 #+STARTUP: showall
 #+TODO: TODO TOREAD READING DONE
 
+
 * Chapter 1
 ** 1.1 Elements of Programming
    - Lisp description of processes, called /procedures/, can
@@ -77,8 +78,4 @@
       * and, or, not
 *** TODO Exercise 1.1 - Exercise 1.5
     SCHEDULED: <2013-12-12 Thu>
-
-
-
-    
 
