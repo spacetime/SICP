@@ -1,6 +1,6 @@
 #-*- mode: org -*-
 #+STARTUP: showall
-#+TODO: TODO TOREAD READING DONE
+#+TODO: TODO SOLVING DONE
 
 
 * Chapter 1
@@ -76,6 +76,11 @@
     - (if <predicate> <consequent> <alternative>)
     - logical composition operations
       * and, or, not
-*** TODO Exercise 1.1 - Exercise 1.5
-    SCHEDULED: <2013-12-12 Thu>
+*** DONE Exercise 1.1 - Exercise 1.5
+*** 1.1.7 Example: Square Roots by Newtons's Method
+    - Procedures must be effective
+    - Math functions have declarative knowledge
+    - Procedures have procedural knowledge
+*** SOLVING Exercise 1.7 - Exercise 1.8
+
 
