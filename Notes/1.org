@@ -81,6 +81,46 @@
     - Procedures must be effective
     - Math functions have declarative knowledge
     - Procedures have procedural knowledge
-*** SOLVING Exercise 1.7 - Exercise 1.8
-
-
+*** DONE Exercise 1.7 - Exercise 1.8
+*** 1.1.8 Procedures as Block-Box Abstractions
+    - For eg. 'square' is a /procedural abstraction/
+    - It is a Black Box. Any procedure that squares will be equally good
+    - Note that a procedure's efficiency depends on the machine
+    - Local Names
+      * The meaning of a procedure should be independent of the
+        parameter names picked by the author
+      * Formal parameter = *Bound Variable* and we say the procedure
+        definition binds its formal parameters
+      * If the variable isn't bound, we call it a *Free Variable*
+      * The set of expressions for which a binding defines a name is
+        called the *scope* of the name.
+      * In procedure definition, bound vars have the body as the scope
+      * For eg. In sqrt, < - abs and square were free!
+      * If we called the param as 'abs' we would *capture* the free
+        variable 'abs'.
+    - Internal definitions and block structure
+      * Auxiliary procedures can be nested in one procedure (defined
+        before the procedures using them) -> *Block Structure*
+    (define (sqrt x) 
+    (define (sqrt-iter guess) ...)  ;notice no 'x' is passed
+    (define ...)
+    (sqrt-iter 1.0 x))
+      * The enclosing procedure can bind a variable that can be free
+        inside the enclosed procedures
+      * This discipline is called Lexical Scoping
+** 1.2 Procedures and the Processes They Generate
+   - A procedure is a pattern for the local evolution of a process
+   - Procedures gives local behaviour, combine to give global behavior
+*** 1.2.1  Linear Recursion and Iteration
+   - A linear recursive process grows linearly and has deferred
+     operations
+   - An iterative process has a fixed no. of /state variables/ + a
+     fixed rule for updating them + (optional) end case
+   - Do not confuse a Recursive Procedure (syntax) with a Recursive
+     Process (evolution i.e. execution)
+   - fact-iter is a recursive procedure which evolves as an Iterative
+     Process due to Tail Recursion
+   - Other languages need special syntax if they don't have Tail
+     Recursion
+   - Other iteration constructs in Scheme are Syntactic Sugar
+*** DONE Exercise 1.9 - Exercise 1.10
