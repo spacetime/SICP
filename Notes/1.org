@@ -111,7 +111,7 @@
 ** 1.2 Procedures and the Processes They Generate
    - A procedure is a pattern for the local evolution of a process
    - Procedures gives local behaviour, combine to give global behavior
-*** 1.2.1  Linear Recursion and Iteration
+*** 1.2.1 Linear Recursion and Iteration
    - A linear recursive process grows linearly and has deferred
      operations
    - An iterative process has a fixed no. of /state variables/ + a
@@ -124,3 +124,19 @@
      Recursion
    - Other iteration constructs in Scheme are Syntactic Sugar
 *** DONE Exercise 1.9 - Exercise 1.10
+*** 1.2.2 Tree Recursion
+(define (fib n)
+  (cond ((= n 0) 0)
+    ((= n 1) 1)
+    (else (+ (fib (- n 1))
+             (fib (- n 2))))))
+   - Evolves as a tree
+   - Too many redundant computations
+   - No. of leaves is Fib(n+1)
+   - Grows as fast as Fib(n)
+   - Fib(n) is closest to golden ration/sqrt(5)
+   - Linear method grows as fast as n
+**** Example: Counting Change
+
+
+
