@@ -136,7 +136,11 @@
    - Grows as fast as Fib(n)
    - Fib(n) is closest to golden ration/sqrt(5)
    - Linear method grows as fast as n
-**** Example: Counting Change
-
+**** DONE Example: Counting Change
+   - Tree recursion may be inefficient but it is very simple to
+     implement
+   - It may not be trivial to tranform tree recursive forms to
+     iterative forms
+*** SOLVING Exercise 1.11 - 1.13
 
 
